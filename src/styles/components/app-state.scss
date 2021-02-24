@@ -1,0 +1,32 @@
+@mixin component-appState($class-name: 'componentAppState') {
+  .#{$class-name} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__paragraph {
+      font-size: 1.45rem;
+      text-align: center;
+      margin: 0;
+      
+      @include media-large-up {
+        font-size: 2rem;
+      }
+    }
+
+    &__started {
+      text-align: center;
+    }
+
+    &__img {
+      margin-top: spacing(2);
+      text-align: center;
+      max-width: 18.75rem;
+      min-width: 18.75rem;
+
+      @include media-large-up {
+        width: 32.5rem;
+      }
+    }
+  }
+}

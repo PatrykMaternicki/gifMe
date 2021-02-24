@@ -5,21 +5,21 @@ import { connect } from 'react-redux';
 import ListingContainer from './containers/Listing';
 import SearchContainer from './containers/Search';
 import ComponentHeader from './components/Header';
+import AppStateComponent from './components/AppState';
 
-
-const App = ({className='appLayout'}) => (
+const App = ({className='appLayout', appState}) => (
   <React.Fragment>
     <ComponentHeader />
     <main className={`${className}__main`}>
       <SearchContainer />
-      <ListingContainer />
+      {appState !== 'LOADED' && <AppStateComponent appState={appState} />}
+      {appState === 'LOADED' && <ListingContainer />}
     </main>
   </React.Fragment>
 )
 
 const mapStateToProps = (state) => ({
-  pixabay: state.images.pixabay,
-  giphy: state.images.giphy
+  appState: state.app.state
 })
 
 export default connect(mapStateToProps, null)(App)

@@ -5,7 +5,7 @@ import notFoundGif from '../assets/not_found.gif'
 const Handler = ({className, src, title}) => (
   <div className={`${className}__started`}>
     <p className={`${className}__paragraph`}>{title}</p>
-    <img className={`${className}__img`} src={src} />
+    <img alt='' className={`${className}__img`} src={src} />
   </div>
 )
 

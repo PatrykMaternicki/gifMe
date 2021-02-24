@@ -14,7 +14,7 @@ const Item = ({src, className = 'componentItem'}) => {
   return (
     <div className={className}>
       <figure className={`${className}__figure`} style={toggleBackground()}>
-        <img onLoad={handleLoad} className={`${className}__img`} src={src} />
+        <img alt='' onLoad={handleLoad} className={`${className}__img`} src={src} />
       </figure>
     </div>
   )

@@ -6,7 +6,10 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import createReducer from './store';
 import thunkMiddleware from 'redux-thunk'
+import imageLoader from './helpers/imageLoader.js'
+import placeholderGif from './assets/placeholder.gif'
 
+imageLoader.load(placeholderGif)
 const store = createStore(createReducer(), applyMiddleware(thunkMiddleware))
 ReactDOM.render(
   <Provider store={store}>

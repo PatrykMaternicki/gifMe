@@ -1,16 +1,16 @@
-import './App.css';
 import React from 'react';
+import './styles/index.scss';
+import 'typeface-pacifico';
 import { connect } from 'react-redux';
 import ListingContainer from './containers/Listing';
 import SearchContainer from './containers/Search';
+import ComponentHeader from './components/Header';
 
 
-const App = () => (
+const App = ({className='appLayout'}) => (
   <React.Fragment>
-    <header>
-      G!f.Me
-    </header>
-    <main>
+    <ComponentHeader />
+    <main className={`${className}__main`}>
       <SearchContainer />
       <ListingContainer />
     </main>

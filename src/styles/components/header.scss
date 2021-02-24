@@ -1,0 +1,32 @@
+@mixin component-header($class-name: 'componentHeader') {
+  .#{$class-name} {
+    background-color: $white-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    z-index: $z-index-nav;
+    border-bottom: 1px solid $gray-300;
+    margin: auto;
+    height: $nav-height;
+    align-items: center;
+    display: flex;
+    padding: 0 spacing(5);
+
+    &__title {
+      margin: 0;
+
+      &--blue {
+        color: $primary-color;
+      }
+
+      &--yellow {
+        color: $secondary-color;
+      }
+
+      &--spacing {
+        padding-left: spacing(2)
+      }
+    }
+  }
+}

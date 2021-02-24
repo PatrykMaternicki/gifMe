@@ -2,5 +2,13 @@
   .#{$class-name} {
     display: grid;
     grid-gap: 1rem;
+    
+    @include media-tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media-large-up {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 }

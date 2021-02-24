@@ -5,6 +5,13 @@
     flex-direction: column;
     padding: spacing(5);
 
+    @include media-large-up {
+      flex-direction: inherit;
+      align-items: center;
+      width: 60%;
+      margin: auto;
+    }
+
     &__input {
       transition: border-color .5s;
       height: 46px;
@@ -36,16 +43,22 @@
       border: 0;            
       border-radius: 10px;
       display: block;
+      cursor: pointer;
 
       &:focus {
         outline: none;
-        background-color: white;
+        background-color: $white-color;
       }
 
       &:hover {
         background-position: right center; 
         color: $white-color;
         text-decoration: none; 
+      }
+
+      @include media-large-up {
+        margin-top: 0;
+        margin-left: spacing(5)
       }
     }
   }

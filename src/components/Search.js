@@ -5,6 +5,7 @@ const SearchComponent = ({handleSearch, className ='componentSearch'}) => {
 
   const handleSubmit = (e) => {
     handleSearch(searchedValue)
+    setSearchedValue('')
     e.preventDefault();
     e.stopPropagation();
   }

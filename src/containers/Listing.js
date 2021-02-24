@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import Item from '../components/Item'
 
-const ListingContainer = ({giphy, pixabay}) => (
-  <div>
+const ListingContainer = ({giphy, pixabay, className = 'containerListing'}) => (
+  <div className={className}>
     {giphy.map((item, index) => <Item key={index} src={item.images.downsized.url} />)}
     {pixabay.map((item, index) => <Item key={index} src={item.webformatURL} /> )}
   </div>

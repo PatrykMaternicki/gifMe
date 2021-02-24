@@ -1,0 +1,26 @@
+$breakpoint-mobile: 45rem;
+$breakpoint-desktop: 76.25rem;
+
+@mixin media-mobile {
+  @media all and (max-width: $breakpoint-mobile) {
+    @content
+  }
+};
+
+@mixin media-tablet {
+  @media all and (min-width: ($breakpoint-mobile + 1)) and (max-width: $breakpoint-desktop) {
+    @content
+  }
+};
+
+@mixin media-middle-up {
+  @media all and (min-width: ($breakpoint-mobile + 1)) {
+    @content;
+  }
+};
+
+@mixin media-large-up {
+  @media all and (min-width: ($breakpoint-desktop + 1)) {
+    @content;
+  }
+};

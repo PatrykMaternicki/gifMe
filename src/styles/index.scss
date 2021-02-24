@@ -17,4 +17,8 @@ $class-name: 'appLayout';
   margin-top: $nav-height;
   min-height: calc(100vh - #{$nav-height});
   background-color: $bg-color;
+  padding: 0 spacing(5);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }

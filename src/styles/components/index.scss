@@ -1,3 +1,5 @@
 @import './header';
+@import './search';
 
-@include component-header
+@include component-header;
+@include component-search;

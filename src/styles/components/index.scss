@@ -1,5 +1,7 @@
 @import './header';
 @import './search';
+@import './item';
 
+@include component-item;
 @include component-header;
 @include component-search;

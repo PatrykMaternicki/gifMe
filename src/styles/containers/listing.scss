@@ -1,0 +1,6 @@
+@mixin container-listing($class-name: 'containerListing') {
+  .#{$class-name} {
+    display: grid;
+    grid-gap: 1rem;
+  }
+}

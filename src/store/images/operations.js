@@ -4,6 +4,7 @@ import Client from '../../helpers/client';
 
 /* eslint-disable import/prefer-default-export */
 export const getImagesBy = (value) => async (dispatch) => {
+  dispatch(ImagesActions.clearImages())
   dispatch(AppActions.setAppState('SEARCHED'));
   const response = await Client.getBy(value);
 

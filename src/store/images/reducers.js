@@ -12,6 +12,11 @@ const imagesReducers = (state = INIT_STATE, action) => {
       ...state, giphy: action.item.giphy, pixabay: action.item.pixabay,
     };
   }
+  case TYPES.IMAGES_CLEAR: {
+    return {
+      ...state, giphy: [], pixabay: []
+    }
+  }
   default:
     return state;
   }

@@ -1,9 +1,9 @@
-import { default as TYPES } from './types';
+import TYPES from './types';
 
 const Actions = {
   setAppState: (item) => ({
-    type: TYPES.APP_SET_STATE, item
-  })
-}
+    type: TYPES.APP_SET_STATE, item,
+  }),
+};
 
-export default Actions
+export default Actions;

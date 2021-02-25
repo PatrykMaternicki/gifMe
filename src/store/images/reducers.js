@@ -1,21 +1,20 @@
-import { default as TYPES } from './types';
+import TYPES from './types';
 
 const INIT_STATE = {
   giphy: [],
-  pixabay: []
-}
+  pixabay: [],
+};
 
 const imagesReducers = (state = INIT_STATE, action) => {
-    switch(action.type) {
-      case TYPES.IMAGES_GET_BY: {
-        console.log(action.item)
-        return {
-          ...state, giphy: action.item.giphy, pixabay: action.item.pixabay
-        }
-      }
-      default: 
-        return state  
-    }
-}
+  switch (action.type) {
+  case TYPES.IMAGES_GET_BY: {
+    return {
+      ...state, giphy: action.item.giphy, pixabay: action.item.pixabay,
+    };
+  }
+  default:
+    return state;
+  }
+};
 
-export default imagesReducers
+export default imagesReducers;

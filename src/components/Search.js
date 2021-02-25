@@ -1,17 +1,17 @@
 import { useState } from 'react';
 
-const SearchComponent = ({handleSearch, className ='componentSearch'}) => {
-  const [searchedValue, setSearchedValue ] = useState('')
+const SearchComponent = ({ handleSearch, className = 'componentSearch' }) => {
+  const [searchedValue, setSearchedValue] = useState('');
 
   const handleSubmit = (e) => {
-    handleSearch(searchedValue)
-    setSearchedValue('')
+    handleSearch(searchedValue);
+    setSearchedValue('');
     e.preventDefault();
     e.stopPropagation();
-  }
+  };
 
-  return(
-    <form 
+  return (
+    <form
       onSubmit={handleSubmit}
       className={className}
     >
@@ -19,16 +19,16 @@ const SearchComponent = ({handleSearch, className ='componentSearch'}) => {
         className={`${className}__input`}
         type="text"
         value={searchedValue}
-        placeholder='Type...'
-        onChange={(e) => setSearchedValue(e.target.value)}  
+        placeholder="Type..."
+        onChange={(e) => setSearchedValue(e.target.value)}
       />
-      <input 
+      <input
         className={`${className}__button`}
-        type="submit" 
+        type="submit"
         value="Search"
       />
     </form>
-  )
-}
+  );
+};
 
-export default SearchComponent
+export default SearchComponent;

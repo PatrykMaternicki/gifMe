@@ -1,6 +1,6 @@
 export default class imageLoader {
-   static async load(src) {
-    let loadedImage = new Image();
-    loadedImage.src = src
+  static async load(src) {
+    const loadedImage = new Image();
+    loadedImage.src = src;
   }
 }

@@ -4,7 +4,7 @@ import AppReducer from './app';
 
 const createReducer = () => combineReducers({
   images: ImagesReducer,
-  app: AppReducer
-})
+  app: AppReducer,
+});
 
 export default createReducer;

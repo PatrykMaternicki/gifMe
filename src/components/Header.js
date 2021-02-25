@@ -1,4 +1,4 @@
-const Header = ({className = 'componentHeader'}) => (
+const Header = ({ className = 'componentHeader' }) => (
   <header className={className}>
     <h1 className={`${className}__title`}>
       G
@@ -7,6 +7,6 @@ const Header = ({className = 'componentHeader'}) => (
       <span className={`${className}__title ${className}__title--spacing`}>.me</span>
     </h1>
   </header>
-)
+);
 
-export default Header
+export default Header;

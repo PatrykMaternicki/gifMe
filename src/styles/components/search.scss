@@ -60,6 +60,10 @@
         text-decoration: none; 
       }
 
+      &:disabled {
+        background-image: linear-gradient(to right, #757F9A 0%, #D7DDE8  51%, #757F9A  100%);
+      }
+
       @include media-large-up {
         margin-top: 0;
         margin-left: spacing(5)

@@ -26,6 +26,7 @@ const SearchComponent = ({ handleSearch, className = 'componentSearch' }) => {
         className={`${className}__button`}
         type="submit"
         value="Search"
+        disabled={searchedValue === ''}
       />
     </form>
   );
